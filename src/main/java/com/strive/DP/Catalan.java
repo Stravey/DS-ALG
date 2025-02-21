@@ -1,6 +1,6 @@
 package com.strive.DP;
 
-//卡特兰数 leetcode96(不同二叉搜索树)  出栈序列问题  leetcode22(括号生成)
+//卡特兰数 leetcode 96(不同二叉搜索树)  出栈序列问题  leetcode22(括号生成)
 public class Catalan {
     static int catalan(int n){
         int[] dp = new int[n + 1];
