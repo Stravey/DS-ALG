@@ -84,4 +84,8 @@ public class DynamicArray implements Iterable<Integer>{
     public IntStream stream(){
         return IntStream.of(Arrays.copyOfRange(array,0,size));
     }
+
+    public int[] array() {
+        return array.clone();
+    }
 }

@@ -1,6 +1,6 @@
 package com.strive.Sort;
 
-import com.liu.www.DynamicArray;
+import com.strive.Array.DynamicArray;
 
 import java.util.Arrays;
 
