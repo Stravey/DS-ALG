@@ -203,7 +203,7 @@ public class BTree {
             //todo i 可能找到了（代表删除key的索引 或 可能没找到（代表到第i个孩子继续寻找）
             if (node.leaf) {
                 //todo case 1:当前节点是叶子节点，没找到
-                if (!found(node, key, i)) {
+                if (found(node, key, i)) {
                     return;
                 }//todo case 2:当前节点是叶子节点，找到了
                 else {
@@ -211,7 +211,7 @@ public class BTree {
                 }
             }else {
                 //todo case 3:当前节点是非叶子节点，没找到
-                if (!found(node, key, i)) {
+                if (found(node, key, i)) {
                     doRemove(node,node.children[i],i,key);
                 } //todo case 4:当前节点是非叶子节点，找到了
                 else {
@@ -286,7 +286,7 @@ public class BTree {
         }
     }
     private boolean found(Node node, int key, int i) {
-        return i < node.keyNumber && node.keys[i] == key;
+        return i >= node.keyNumber || node.keys[i] != key;
     }
 
 }
