@@ -34,8 +34,6 @@ public class LinkedListQueue<E>
         }
         Node<E> added = new Node<>(value,head);
         tail.next = added;
-
-
         tail = added;
         size++;
         return false;
