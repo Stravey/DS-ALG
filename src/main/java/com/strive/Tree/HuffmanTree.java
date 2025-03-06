@@ -8,7 +8,7 @@ import java.util.PriorityQueue;
 //todo 用满二叉树结构编码  向左走 0，向右走 1  走到叶子字符，累积起来的 0 和 1 就是该字符的二进制编码
 //todo 哈夫曼树 哈夫曼编码
 public class HuffmanTree {
-    /*
+    /**
        哈夫曼树构建过程
        1.将统计了出现频率的字符，放入优先级队列
        2.每次出队两个频次最低的元素，给他俩找个爹
@@ -59,11 +59,6 @@ public class HuffmanTree {
         //todo 1.统计每个字符的频次
         char[] chars = str.toCharArray();
         for(char c : chars) {
-            /*if(!map.containsKey(c)) {
-                map.put(c,new Node(c));
-            }
-            Node node = map.get(c);
-            node.freq++;*/
             Node node = map.computeIfAbsent(c,Node::new);
             node.freq++;
         }
@@ -145,7 +140,6 @@ public class HuffmanTree {
         }
         return sb.toString();
     }
-
 
     public static void main(String[] args) {
         HuffmanTree tree = new HuffmanTree("abbccccccc");
