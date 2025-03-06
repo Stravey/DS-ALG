@@ -6,7 +6,7 @@ import java.math.BigInteger;
  * This is the first sample for System.out.print().
  */
 //在java中注释有三种方式
-public class Sample {
+public class Sample01 {
 
     /**
      * Java中有一个可以表示任意精度的算术包，通常被称为大数（BigNumber），它是一个Java对象
@@ -49,6 +49,15 @@ public class Sample {
     public static void function2() {
         char c = 'a';
         System.out.println(c);
+    }
+
+    /**
+     * Java当中的boolean类型
+     * C++中 数值和指针可以代替boolean值 0值相当于布尔值false，非0值相当于布尔值true
+     */
+    public static void function3() {
+        boolean b = true;
+        System.out.println(b);
     }
 
 }
