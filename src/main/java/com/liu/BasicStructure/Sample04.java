@@ -9,6 +9,8 @@ public class Sample04 implements demo{
     public static void main(String[] args) {
         Sample04 demo = new Sample04();
         demo.a();
+        demo.b();
+        demo.c();
     }
 
     @Override
@@ -27,7 +29,8 @@ public class Sample04 implements demo{
 
     @Override
     public void c() {
-
+        String a = "Hello";
+        System.out.println(a);
     }
 
     @Override
