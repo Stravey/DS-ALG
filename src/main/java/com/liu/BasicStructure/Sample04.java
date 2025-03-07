@@ -27,5 +27,10 @@ public class Sample04 implements demo{
     public void c() {
 
     }
+
+    @Override
+    public void d() {
+
+    }
 }
 
