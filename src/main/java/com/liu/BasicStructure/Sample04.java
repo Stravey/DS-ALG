@@ -20,7 +20,9 @@ public class Sample04 implements demo{
 
     @Override
     public void b() {
-
+        char a = '1';
+        char b = '9';
+        System.out.println(a + b);
     }
 
     @Override
