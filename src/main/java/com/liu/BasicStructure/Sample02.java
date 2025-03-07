@@ -9,6 +9,7 @@ public class Sample02 {
         System.out.println(isJavaIdentifierStart('a'));
         System.out.println(isJavaIdentifierPart('a'));
         Ha();
+        De();
     }
 
     /**
@@ -40,5 +41,15 @@ public class Sample02 {
         double paperHeight = 11;
         System.out.println("Paper Size in centimeters: "
                 + paperWidth * CM_PER_INCH + " by " + paperHeight * CM_PER_INCH);
+    }
+
+    /**
+     * Java当中的枚举类型 enum
+     */
+    public static void De() {
+        //自定义枚举类型
+        enum Size{SMALL, MEDIUM, LARGE,EXTRA_LARGE};
+        Size size = Size.MEDIUM;
+        System.out.println(size);
     }
 }
