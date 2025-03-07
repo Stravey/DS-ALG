@@ -17,5 +17,15 @@ public class Sample04 implements demo{
         String greeting = "Hello";
         System.out.println(e + " " + greeting);
     }
+
+    @Override
+    public void b() {
+
+    }
+
+    @Override
+    public void c() {
+
+    }
 }
 
