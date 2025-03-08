@@ -2,12 +2,18 @@ package com.liu.BasicStructure;
 
 import org.junit.Test;
 
+import java.io.IOException;
+import java.math.BigInteger;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Path;
+import java.util.Scanner;
+
 public class Sample04 implements demo{
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Sample04 demo = new Sample04();
-        demo.a();
-        //demo.b();
+        //demo.a();
+        demo.b();
         //demo.c();
     }
     /**
@@ -58,16 +64,49 @@ public class Sample04 implements demo{
 
     }
 
+    /**
+     * Java中没有提供运算符重载的功能
+     */
     @Override
     @Test
-    public void b() {
+    public void b() throws IOException {
+        /*BigInteger a = BigInteger.valueOf(100);
+        System.out.println(a);
+        Scanner in = new Scanner(System.in);
+        System.out.print("你想写多少数字呢？");
+        int k = in.nextInt();
+        System.out.print("你写的最大的数字是多少？");
+        int n = in.nextInt();
+        BigInteger lotteryOdds = BigInteger.valueOf(1);
+        for(int i = 1;i <= k;i++) {
+            lotteryOdds = lotteryOdds.multiply(BigInteger.valueOf(n - i + 1)).divide(BigInteger.valueOf(i));
+        }
+        System.out.println(lotteryOdds);*/
+
+        //add、subtract、multiply、divide 加减乘除方法
+        BigInteger x = BigInteger.valueOf(1412448146);
+        BigInteger y = BigInteger.valueOf(214113);
+        //加法
+        System.out.println(x.add(y));
+        //减法
+        System.out.println(x.subtract(y));
+        //乘法
+        System.out.println(x.multiply(y));
+        //除法
+        System.out.println(x.divide(y));
+
+
 
     }
 
     @Override
     @Test
     public void c() {
-
+        var a = new int[100];
+        for (int i = 0; i < a.length; i++) {
+            a[i] = i;
+            System.out.println(a[i]);
+        }
     }
 
     @Override
