@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.math.BigInteger;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
+import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Sample04 implements demo{
@@ -99,13 +101,39 @@ public class Sample04 implements demo{
 
     }
 
+    /**
+     * 数组
+     */
     @Override
     @Test
     public void c() {
         var a = new int[100];
-        for (int i = 0; i < a.length; i++) {
+        for(int i = 0; i < a.length; i++){
+            a[i] = i;
+        }
+        //普通for循环
+        /*for (int i = 0; i < a.length; i++) {
             a[i] = i;
             System.out.println(a[i]);
+        }*/
+        //增强for循环 可以不用管下标
+        for (int i : a) {
+            a[i] = i;
+            //System.out.println(a[i]);
+        }
+        //还可以使用Arrays.toString方法 输出为字符串
+        System.out.println(Arrays.toString(a));
+
+        //java中允许将一个数组变量拷贝到另一个数组变量 Arrays.copyOf方法
+        int[] b = {2,4,6,8,10};
+        int[] copy = Arrays.copyOf(b,b.length);
+        System.out.println(Arrays.toString(copy));
+
+        int[] c = {12,42,64,10,90,26,33,85};
+        //改进后的快速排序算法 详见源码DualPivotQuicksort.java
+        Arrays.sort(c);
+        for(int i = 0;i < c.length;i++){
+            System.out.print(c[i] + " ");
         }
     }
 
