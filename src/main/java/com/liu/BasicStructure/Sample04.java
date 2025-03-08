@@ -135,6 +135,7 @@ public class Sample04 implements demo{
         for(int i = 0;i < c.length;i++){
             System.out.print(c[i] + " ");
         }
+
     }
 
     @Override
