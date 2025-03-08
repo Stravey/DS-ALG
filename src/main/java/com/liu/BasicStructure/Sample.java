@@ -2,17 +2,25 @@ package com.liu.BasicStructure;
 
 import com.strive.Stack.ArrayStack;
 
-public class Sample {
-
-    ArrayStack stack;
-
-    public void setStack(ArrayStack stack) {
-        this.stack = stack;
-    }
-
+public class Sample implements Animal{
 
     public static void main(String[] args) {
         System.out.println("Hello World");
         System.out.println("Hello World");
+    }
+
+    @Override
+    public void eat() {
+        System.out.println("Eating");
+    }
+
+    @Override
+    public void sleep() {
+
+    }
+
+    @Override
+    public void bark() {
+
     }
 }
