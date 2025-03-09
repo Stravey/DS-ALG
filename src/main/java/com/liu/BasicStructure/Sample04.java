@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.math.BigInteger;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
@@ -138,9 +139,32 @@ public class Sample04 implements demo{
 
     }
 
+    @SuppressWarnings("all")
     @Override
     @Test
     public void d() {
+        //Array中提供了Math.random方法可以返回一个0到1之间（包含0，不包含1）的随机浮点数
+        int r = (int)(Math.random() * 10);
+        System.out.println(r);
+        ArrayList arrayList = new ArrayList();
+        arrayList.add(111);
+        arrayList.add(222);
+        arrayList.add(333);
+        arrayList.add(444);
+        arrayList.add(555);
+        System.out.println(arrayList);
+        int[] b = {0,0,0,0,0,0};
+        int[] a = {1,5,9,2,0,7,6,3,4,8};
+        Arrays.sort(a);
+        //二分查找
+        Arrays.binarySearch(a,2);
+        System.out.println(Arrays.toString(a));
+        //将数组中所有的元素设置为15
+        Arrays.fill(a,15);
+        System.out.println(Arrays.toString(a));
+        //判断两个数组是否相等
+        Arrays.equals(a,b);
+        System.out.println(Arrays.equals(a,b));
 
     }
 }
