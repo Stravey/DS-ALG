@@ -7,7 +7,20 @@ public class Employee {
     //instance fields
     private final String name;
     private double salary;
-    private final LocalDate hireDay;
+    private LocalDate hireDay;
+
+    public Employee(String name, double salary) {
+        this.name = name;
+        this.salary = salary;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "salary=" + salary +
+                ", name='" + name + '\'' +
+                '}';
+    }
 
     //constructor
     public Employee(String name, double salary, int year,int month,int day) {
@@ -15,6 +28,8 @@ public class Employee {
         this.salary = salary;
         hireDay = LocalDate.of(year,month,day);
     }
+
+
 
     //封装的优点
     //
