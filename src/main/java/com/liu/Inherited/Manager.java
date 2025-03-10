@@ -17,6 +17,7 @@ public class Manager extends Employee {
 
     public Manager(String name, double salary, int year, int month, int day) {
         super(name, salary, year, month, day);
+        bonus = 0;
     }
 
     public void setBonus(double bonus) {
@@ -24,6 +25,11 @@ public class Manager extends Employee {
     }
     public double getBonus() {
         return bonus;
+    }
+
+    public double getSalary() {
+        double salary = super.getSalary();
+        return salary + bonus;
     }
 
     @Test
