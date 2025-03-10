@@ -8,6 +8,7 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertIterableEquals;
 
+@SuppressWarnings("all")
 public class TestDynamicArray {
 
     @Test
