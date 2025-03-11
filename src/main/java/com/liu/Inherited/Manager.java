@@ -48,6 +48,8 @@ public class Manager extends Employee {
         System.out.println(e.toString());
         Employee a = new Secretary("王五",3000);
         System.out.println(a.toString());
+        Employee staff = new Secretary("李俞卓",5000,2003,7,16);
+        System.out.println(staff.toString());
 
     }
 }
