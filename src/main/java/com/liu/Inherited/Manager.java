@@ -41,5 +41,13 @@ public class Manager extends Employee {
         Manager manager = new Manager("张三",1000);
         manager.setBonus(1.5);
         System.out.println(manager.toString());
+
+        //多态
+        //Employee类型可以new Employee的所有子类
+        Employee e = new Manager("李四",2000);
+        System.out.println(e.toString());
+        Employee a = new Secretary("王五",3000);
+        System.out.println(a.toString());
+
     }
 }
