@@ -1,9 +1,11 @@
 package com.liu.OOP;
 
+import com.liu.Inherited.Person;
+
 import java.time.LocalDate;
 
 @SuppressWarnings("all")
-public class Employee {
+public class Employee extends Person {
     //instance fields
     private final String name;
     private double salary;

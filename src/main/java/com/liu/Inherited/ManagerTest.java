@@ -32,5 +32,14 @@ public class ManagerTest {
         Employee c = new Executive("刘刚",20000,2002,11,5);
         System.out.println(c.toString());
 
+        //超类引用赋给子类变量时 需要强化类型转换
+        //instanceof 关键字可以查看是否成功转换
+        Manager newboss = (Manager) staff[1];
+        if(staff[1] instanceof Manager) {
+            newboss = (Manager) staff[1];
+        }
+
+
+
     }
 }
