@@ -11,6 +11,7 @@ public abstract class Person {
 
     //抽象方法
     public abstract String getDescription();
+    public abstract String getPersonality();
 
     public Person() {
     }
@@ -28,7 +29,6 @@ public abstract class Person {
         this.height = height;
         this.weight = weight;
     }
-
 
     public String setName(String name) {
         return this.name = name;

@@ -15,8 +15,13 @@ public class InheritedTest {
             public String getDescription() {
                 return "Gao";
             }
+            @Override
+            public String getPersonality() {
+                return "Stern";
+            }
         };
         System.out.println(p1.getDescription());
+        System.out.println(p1.getPersonality());
         System.out.println(p1.toString());
 
         Person P2 = new Person("李四",19,"女",1.65,45.8) {
@@ -24,8 +29,15 @@ public class InheritedTest {
             public String getDescription() {
                 return "The description is thin";
             }
+            @Override
+            public String getPersonality() {
+                return "Blending";
+            }
         };
         System.out.println(P2.getDescription());
+        System.out.println(
+                P2.getPersonality()
+        );
         System.out.println(P2.toString());
     }
 

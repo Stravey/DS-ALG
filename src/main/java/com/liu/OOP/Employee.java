@@ -36,6 +36,10 @@ public class Employee extends Person {
     public String getDescription() {
         return "";
     }
+    @Override
+    public String getPersonality() {
+        return "";
+    }
 
     //封装的优点
     //
