@@ -1,6 +1,9 @@
 package com.liu.Inherited;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ArrayList;
 
 public class Pupils {
@@ -42,7 +45,7 @@ public class Pupils {
         arraylist.add(new information("Juice", 26));
         System.out.println(arraylist);
 
-        Connection con = GetConnection();
+        Connection con = DriverManager.getConnection();
         String sql = "insert into pupils (name, age) values (?, ?)";
 
     }
