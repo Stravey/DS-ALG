@@ -45,7 +45,7 @@ public class Pupils {
         arraylist.add(new information("Juice", 26));
         System.out.println(arraylist);
 
-        Connection con = DriverManager.getConnection();
+
         String sql = "insert into pupils (name, age) values (?, ?)";
 
     }
