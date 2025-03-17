@@ -10,6 +10,5 @@ public class TestOrdersMapper {
 
     public void selectAll() throws SQLException {
         String sql = "select * from orders";
-
     }
 }
