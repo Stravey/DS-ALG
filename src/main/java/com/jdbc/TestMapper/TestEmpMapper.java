@@ -1,6 +1,6 @@
-package com.TestMapper;
+package com.jdbc.TestMapper;
 
-import com.mapper.EmpMapper;
+import com.jdbc.mapper.EmpMapper;
 
 import java.sql.SQLException;
 

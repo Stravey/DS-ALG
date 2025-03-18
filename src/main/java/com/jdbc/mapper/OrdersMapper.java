@@ -1,4 +1,4 @@
-package com.mapper;
+package com.jdbc.mapper;
 
 import java.sql.*;
 

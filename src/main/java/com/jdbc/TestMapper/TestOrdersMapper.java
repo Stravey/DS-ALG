@@ -1,4 +1,4 @@
-package com.TestMapper;
+package com.jdbc.TestMapper;
 
 import java.sql.SQLException;
 
