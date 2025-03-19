@@ -21,10 +21,14 @@ public class OrdersMapper {
         String sql = "select * from orders";
         PreparedStatement ps = conn.prepareStatement(sql);
         ResultSet rs = ps.executeQuery();
-        int count = 0;
+        List<Orders> list = new ArrayList<>();
         while (rs.next()) {
-            count++;
+            Orders o = new Orders();
+            o.setOld(rs.getInt("oid"));
+            o.setPrice(rs.getDouble("price"));
+            o.setPayType(rs.getInt("payType"));
+            list.add(o);
         }
-        return new ArrayList<Orders>(count);
+        return list;
     }
 }
