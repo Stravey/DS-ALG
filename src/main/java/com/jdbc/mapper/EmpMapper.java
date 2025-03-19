@@ -10,7 +10,7 @@ public class EmpMapper {
     Connection connection = null;
 
     public EmpMapper() throws SQLException {
-        String url = "jdbc:mysql://localhost:3306/mydb4";
+        String url = "jdbc:mysql://127.0.0.1:3306/mydb4?characterEncoding=utf8&useSSL=false";
         String name = "root";
         String password = "liu123456";
         connection = DriverManager.getConnection(url, name, password);
@@ -28,8 +28,7 @@ public class EmpMapper {
         pm.setString(3,department);
         pm.setInt(4,emp_id);
         //4.执行sql
-        int result = pm.executeUpdate();
-        return result;
+        return pm.executeUpdate();
         //查询
         //pm.executeQuery();
     }

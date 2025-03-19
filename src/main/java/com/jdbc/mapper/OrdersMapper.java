@@ -3,6 +3,7 @@ package com.jdbc.mapper;
 import com.jdbc.pojo.Orders;
 
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class OrdersMapper {
@@ -20,9 +21,10 @@ public class OrdersMapper {
         String sql = "select * from orders";
         PreparedStatement ps = conn.prepareStatement(sql);
         ResultSet rs = ps.executeQuery();
+        int count = 0;
         while (rs.next()) {
             count++;
         }
-        return c
+        return new ArrayList<Orders>(count);
     }
 }
