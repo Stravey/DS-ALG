@@ -1,5 +1,7 @@
 package com.jdbc.pojo;
 
+import java.util.Objects;
+
 public class Worker {
     int id;
     String name;
@@ -57,5 +59,17 @@ public class Worker {
                 ", salary=" + salary +
                 ", department='" + department + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Worker worker = (Worker) o;
+        return id == worker.id && Double.compare(salary, worker.salary) == 0 && Objects.equals(name, worker.name) && Objects.equals(department, worker.department);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, salary, department);
     }
 }

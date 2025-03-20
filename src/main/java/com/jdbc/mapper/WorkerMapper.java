@@ -51,4 +51,18 @@ public class WorkerMapper {
         return workers;
     }
 
+    //查询财务部的员工信息
+    public List<Worker> searchDepartmentOfFinacial() throws SQLException {
+        String sql = "select * from worker where department = '财务部'";
+        PreparedStatement ps = connection.prepareStatement(sql);
+        ResultSet rs = ps.executeQuery();
+        List<Worker> result = new ArrayList<>();
+        while(rs.next()) {
+            Worker worker = new Worker();
+            worker.getId();
+            result.add(worker);
+        }
+        return result;
+    }
+
 }

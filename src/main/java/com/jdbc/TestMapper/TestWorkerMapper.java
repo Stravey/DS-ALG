@@ -6,10 +6,11 @@ import com.jdbc.pojo.Worker;
 import java.sql.SQLException;
 import java.util.List;
 
-public class TestEmpMapper {
+public class TestWorkerMapper {
     public static void main(String[] args) throws Exception {
         //test1();
-        test2();
+        //test2();
+        test3();
     }
 
     public static void test1() throws SQLException {
@@ -28,6 +29,13 @@ public class TestEmpMapper {
         for (Worker worker : workerList) {
             System.out.println(worker.toString());
         }
+    }
 
+    public static void test3() throws SQLException {
+        WorkerMapper workerMapper = new WorkerMapper();
+        List<Worker> workers = workerMapper.searchDepartmentOfFinacial();
+        for(Worker worker : workers){
+            System.out.println(worker.toString());
+        }
     }
 }
