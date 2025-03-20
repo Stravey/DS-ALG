@@ -10,11 +10,10 @@ import java.util.List;
 public class TestWorkerMapper {
     public static void main(String[] args) throws Exception {
         //test1();
-        //test2();
-        test3();
     }
 
-    public static void test1() throws SQLException {
+    @Test
+    public void test1() throws SQLException {
         WorkerMapper workerMapper = new WorkerMapper();
         int result = workerMapper.updateByNumber(8,"王五",10000,"营销部");
         if(result > 0){
@@ -33,8 +32,21 @@ public class TestWorkerMapper {
         }
     }
 
-    public static void test3() throws SQLException {
+    @Test
+    public void test3() throws SQLException {
         WorkerMapper workerMapper = new WorkerMapper();
         workerMapper.searchDepartmentOfFinacial();
+    }
+
+    @Test
+    public void test4() throws SQLException {
+        WorkerMapper workerMapper = new WorkerMapper();
+        workerMapper.searchSalaryOver8000();
+    }
+
+    @Test
+    public void test5() throws SQLException {
+        WorkerMapper workerMapper = new WorkerMapper();
+        workerMapper.OrderBySalary();
     }
 }

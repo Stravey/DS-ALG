@@ -51,9 +51,8 @@ public class WorkerMapper {
         return workers;
     }
 
-    //查询财务部的员工信息
-    public void searchDepartmentOfFinacial() throws SQLException {
-        String sql = "select * from worker where department = '财务部'";
+    //输出所有的信息（只需将sql传入即可）
+    private void DisplayAllInformation(String sql) throws SQLException {
         PreparedStatement ps = connection.prepareStatement(sql);
         ResultSet rs = ps.executeQuery();
         while(rs.next()) {
@@ -65,5 +64,34 @@ public class WorkerMapper {
             System.out.println(workerId + " " + workerName + " " + workerSalary + " " + department);
         }
     }
+
+    //只输出id信息
+    private void DisplayIdInformation(String sql) throws SQLException {
+        PreparedStatement ps = connection.prepareStatement(sql);
+        ResultSet rs = ps.executeQuery();
+        while(rs.next()) {
+            int workerId = rs.getInt("emp_id");
+            System.out.println(workerId);
+        }
+    }
+
+    //查询财务部的员工信息
+    public void searchDepartmentOfFinacial() throws SQLException {
+        String sql = "select * from worker where department = '财务部'";
+        DisplayAllInformation(sql);
+    }
+
+    //查询工资大于8000的员工信息
+    public void searchSalaryOver8000() throws SQLException {
+        String sql = "select * from worker where salary > 8000";
+        DisplayAllInformation(sql);
+    }
+
+    //根据工资进行排序
+    public void OrderBySalary() throws SQLException {
+        String sql = "select * from worker order by salary desc";
+        DisplayAllInformation(sql);
+    }
+
 
 }
