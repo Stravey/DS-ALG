@@ -9,7 +9,6 @@ public class Worker {
     String department;
 
     public Worker() {
-
     }
 
     public Worker(int id, String name, double salary, String department) {

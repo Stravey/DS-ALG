@@ -2,6 +2,7 @@ package com.jdbc.TestMapper;
 
 import com.jdbc.mapper.WorkerMapper;
 import com.jdbc.pojo.Worker;
+import org.junit.Test;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -23,7 +24,8 @@ public class TestWorkerMapper {
         }
     }
 
-    public static void test2() throws Exception {
+    @Test
+    public void test2() throws Exception {
         WorkerMapper workerMapper = new WorkerMapper();
         List<Worker> workerList = workerMapper.selectAll();
         for (Worker worker : workerList) {
@@ -33,9 +35,6 @@ public class TestWorkerMapper {
 
     public static void test3() throws SQLException {
         WorkerMapper workerMapper = new WorkerMapper();
-        List<Worker> workers = workerMapper.searchDepartmentOfFinacial();
-        for(Worker worker : workers){
-            System.out.println(worker.toString());
-        }
+        workerMapper.searchDepartmentOfFinacial();
     }
 }
