@@ -49,4 +49,10 @@ public class TestWorkerMapper {
         WorkerMapper workerMapper = new WorkerMapper();
         workerMapper.OrderBySalary();
     }
+
+    @Test
+    public void test6() throws SQLException {
+        WorkerMapper workerMapper = new WorkerMapper();
+        workerMapper.SearchSecondSalary();
+    }
 }

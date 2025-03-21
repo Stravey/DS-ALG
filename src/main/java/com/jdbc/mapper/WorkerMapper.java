@@ -75,6 +75,16 @@ public class WorkerMapper {
         }
     }
 
+    //只输出name姓名
+    private void DisplayNameInformation(String sql) throws SQLException {
+        PreparedStatement ps = connection.prepareStatement(sql);
+        ResultSet rs = ps.executeQuery();
+        while(rs.next()) {
+            String workerId = rs.getString("emp_name");
+            System.out.println(workerId);
+        }
+    }
+
     //查询财务部的员工信息
     public void searchDepartmentOfFinacial() throws SQLException {
         String sql = "select * from worker where department = '财务部'";
@@ -90,6 +100,12 @@ public class WorkerMapper {
     //根据工资进行排序
     public void OrderBySalary() throws SQLException {
         String sql = "select * from worker order by salary desc";
+        DisplayAllInformation(sql);
+    }
+
+    //查询每个部门第二高的员工信息
+    public void SearchSecondSalary() throws SQLException {
+        String sql = "select * from worker where salary > (select max(salary) from worker)";
         DisplayAllInformation(sql);
     }
 
