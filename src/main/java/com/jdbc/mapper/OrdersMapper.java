@@ -1,6 +1,7 @@
 package com.jdbc.mapper;
 
 import com.jdbc.pojo.Orders;
+import com.jdbc.pojo.Worker;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -17,6 +18,20 @@ public class OrdersMapper {
         conn = DriverManager.getConnection(url, user, password);
     }
 
+
+    static void PreparedStatement(String sql, Connection conn) throws SQLException {
+        PreparedStatement ps = conn.prepareStatement(sql);
+        ResultSet rs = ps.executeQuery();
+        while(rs.next()) {
+            Worker worker = new Worker();
+            int workerId = rs.getInt("emp_id");
+            String workerName = rs.getString("emp_name");
+            double workerSalary = rs.getDouble("salary");
+            String department = rs.getString("department");
+            System.out.println(workerId + " " + workerName + " " + workerSalary + " " + department);
+        }
+    }
+
     public List<Orders> selectAll() throws SQLException {
         String sql = "select * from orders";
         PreparedStatement ps = conn.prepareStatement(sql);
@@ -31,4 +46,9 @@ public class OrdersMapper {
         }
         return list;
     }
+
+    private void DisplayAllInformation(String sql) throws SQLException {
+        PreparedStatement(sql, conn);
+    }
+
 }

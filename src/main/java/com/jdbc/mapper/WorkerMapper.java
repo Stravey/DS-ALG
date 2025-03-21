@@ -53,16 +53,7 @@ public class WorkerMapper {
 
     //输出所有的信息（只需将sql传入即可）
     private void DisplayAllInformation(String sql) throws SQLException {
-        PreparedStatement ps = connection.prepareStatement(sql);
-        ResultSet rs = ps.executeQuery();
-        while(rs.next()) {
-            Worker worker = new Worker();
-            int workerId = rs.getInt("emp_id");
-            String workerName = rs.getString("emp_name");
-            double workerSalary = rs.getDouble("salary");
-            String department = rs.getString("department");
-            System.out.println(workerId + " " + workerName + " " + workerSalary + " " + department);
-        }
+        OrdersMapper.PreparedStatement(sql, connection);
     }
 
     //只输出id信息
