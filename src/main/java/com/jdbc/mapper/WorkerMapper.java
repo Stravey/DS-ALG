@@ -100,5 +100,13 @@ public class WorkerMapper {
         DisplayAllInformation(sql);
     }
 
+    //查询人事部中工资大于6000的员工信息
+    public void SearchPeopleDepartmentOf6000() throws SQLException {
+        String sql = "select * from worker where salary > 6000 and department = '人事部'";
+        DisplayAllInformation(sql);
+        DisplayNameInformation(sql);
+        DisplayIdInformation(sql);
+    }
+
 
 }

@@ -55,4 +55,10 @@ public class TestWorkerMapper {
         WorkerMapper workerMapper = new WorkerMapper();
         workerMapper.SearchSecondSalary();
     }
+
+    @Test
+    public void test7() throws SQLException {
+        WorkerMapper workerMapper = new WorkerMapper();
+        workerMapper.SearchPeopleDepartmentOf6000();
+    }
 }
