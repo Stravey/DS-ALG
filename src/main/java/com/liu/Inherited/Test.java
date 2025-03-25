@@ -111,7 +111,7 @@ public class Test {
         animal.eat();
         Cat cat = new Cat("咪咪",20);
         Animal animal2 = new Dog("hello",10,false);
-        Animal animal3 = new Cat("haha",11);*/
+        */
     }
 }
 
