@@ -66,7 +66,7 @@ public class LexicalAnalyzerGUI extends JFrame {
         // 设置窗口标题为“词法分析器”
         setTitle("词法分析器");
         // 设置窗口大小为 800x600 像素
-        setSize(800, 600);
+        setSize(900, 600);
         // 设置关闭窗口时的操作，即退出程序
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         // 设置窗口布局为 BorderLayout
@@ -242,7 +242,16 @@ public class LexicalAnalyzerGUI extends JFrame {
                     number.append(input.charAt(i));
                     i++;
                 }
-                // 添加常数对应的 Token
+                // 检查后续字符是否为非数字且非合法分隔符（如运算符、界符或空白符）
+                if (i < input.length()) {
+                    char nextChar = input.charAt(i);
+                    if (!isSeparator(nextChar)) {
+                        // 非法字符附加到常数中，记录错误
+                        tokens.add(new Token(-1, "[错误]非法常数: " + number + input.charAt(i)));
+                        i++; // 跳过非法字符
+                        continue;
+                    }
+                }
                 tokens.add(new Token(500, number.toString()));
             }
             // 处理运算符和界符
@@ -261,11 +270,19 @@ public class LexicalAnalyzerGUI extends JFrame {
                 if (OPERATORS.containsKey(op.toString())) {
                     // 若为单字符运算符或界符，添加对应的 Token
                     tokens.add(new Token(OPERATORS.get(op.toString()), op.toString()));
+                } else {
+                    // 遇到无法识别的字符，添加错误 Token
+                    tokens.add(new Token(-1, "错误: 无法识别的字符 '" + c + "'"));
                 }
                 i++;
             }
         }
         return tokens;
+    }
+
+    // 判断字符是否为合法分隔符（运算符、界符或空白符）
+    private boolean isSeparator(char c) {
+        return Character.isWhitespace(c) || OPERATORS.containsKey(String.valueOf(c));
     }
 
     public static void main(String[] args) {
