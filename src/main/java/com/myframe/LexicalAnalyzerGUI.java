@@ -1,4 +1,4 @@
-package com;
+package com.myframe;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,6 +14,22 @@ import java.util.List;
 import java.util.Map;
 
 @SuppressWarnings("all")
+
+// 词法单元类，用于表示词法分析得到的一个词法单元
+class Token {
+    int type;
+    String value;
+
+    public Token(int type, String value) {
+        this.type = type;
+        this.value = value;
+    }
+
+    @Override
+    public String toString() {
+        return "Token{type=" + type + ", value='" + value + "'}";
+    }
+}
 // 主窗口类，继承自 JFrame
 public class LexicalAnalyzerGUI extends JFrame {
     // 输入文本区域，用于用户输入待分析的代码
@@ -164,7 +180,7 @@ public class LexicalAnalyzerGUI extends JFrame {
     }
 
     // 上传文件按钮的监听器类，实现 ActionListener 接口
-    private class UploadButtonListener implements ActionListener {
+    public class UploadButtonListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
             // 创建文件选择器
@@ -288,21 +304,5 @@ public class LexicalAnalyzerGUI extends JFrame {
     public static void main(String[] args) {
         // 在事件调度线程中创建并显示 GUI
         SwingUtilities.invokeLater(() -> new LexicalAnalyzerGUI());
-    }
-}
-
-// 词法单元类，用于表示词法分析得到的一个词法单元
-class Token {
-    int type;
-    String value;
-
-    public Token(int type, String value) {
-        this.type = type;
-        this.value = value;
-    }
-
-    @Override
-    public String toString() {
-        return "Token{type=" + type + ", value='" + value + "'}";
     }
 }
