@@ -13,8 +13,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@SuppressWarnings("all")
-
 // 词法单元类，用于表示词法分析得到的一个词法单元
 class Token {
     int type;
@@ -30,6 +28,7 @@ class Token {
         return "Token{type=" + type + ", value='" + value + "'}";
     }
 }
+@SuppressWarnings("all")
 // 主窗口类，继承自 JFrame
 public class LexicalAnalyzerGUI extends JFrame {
     // 输入文本区域，用于用户输入待分析的代码
