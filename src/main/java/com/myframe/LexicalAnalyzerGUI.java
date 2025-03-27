@@ -92,7 +92,7 @@ public class LexicalAnalyzerGUI extends JFrame {
         // 创建输入标签，提示用户输入代码
         JLabel inputLabel = new JLabel("输入代码:");
         // 创建输入文本区域，初始大小为 30x30
-        inputTextArea = new JTextArea(30, 30);
+        inputTextArea = new JTextArea(35, 35);
         // 为输入文本区域添加滚动条
         JScrollPane inputScrollPane = new JScrollPane(inputTextArea);
         // 将输入标签添加到输入面板的北部
@@ -105,7 +105,7 @@ public class LexicalAnalyzerGUI extends JFrame {
         // 创建输出标签，提示用户查看分析结果
         JLabel outputLabel = new JLabel("分析结果:");
         // 创建输出文本区域，初始大小为 30x30，设置为不可编辑
-        outputTextArea = new JTextArea(30, 30);
+        outputTextArea = new JTextArea(35, 35);
         outputTextArea.setEditable(false);
         // 为输出文本区域添加滚动条
         JScrollPane outputScrollPane = new JScrollPane(outputTextArea);
