@@ -1,4 +1,4 @@
-package com.jdbc.pojo;
+package com.jdbc.jdbc_first.pojo;
 
 import java.util.Objects;
 

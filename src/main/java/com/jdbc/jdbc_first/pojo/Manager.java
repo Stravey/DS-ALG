@@ -1,4 +1,4 @@
-package com.jdbc.pojo;
+package com.jdbc.jdbc_first.pojo;
 
 public class Manager {
     String name;

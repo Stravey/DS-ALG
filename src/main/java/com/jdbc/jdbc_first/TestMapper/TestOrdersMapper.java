@@ -1,7 +1,7 @@
-package com.jdbc.TestMapper;
+package com.jdbc.jdbc_first.TestMapper;
 
-import com.jdbc.mapper.OrdersMapper;
-import com.jdbc.pojo.Orders;
+import com.jdbc.jdbc_first.mapper.OrdersMapper;
+import com.jdbc.jdbc_first.pojo.Orders;
 import org.junit.Test;
 
 import java.sql.SQLException;

@@ -46,4 +46,47 @@ public class Practice {
         System.out.println(s2.replace(" ",""));
     }
 
+    @Test
+    public void test_03() {
+        String str = "abdsx";
+        String n = "abdsx";
+        String m = "abcd";
+        // 比较字符串是否相等
+        System.out.println(n.equals(m));
+        System.out.println(n.equals(str));
+
+        // 连接字符串
+        System.out.println(String.join(n, m));
+        System.out.println(String.join(n, str));
+
+        // 转换成字符串数组
+        char s[] = n.toCharArray();
+        char a[] = m.toCharArray();
+        System.out.println(s);
+        System.out.println(a.toString());
+    }
+
+    @Test
+    public void test_04() {
+        String a = "abcde";
+        String b = "abcdefg";
+        String c = "bcdefg";
+        // 返回最后一次出现相同字符的索引位置
+        System.out.println(a.compareTo(b));
+        System.out.println(a.compareTo(c));
+
+        // 判空
+        String d = " ";
+        System.out.println(a.isEmpty());
+        System.out.println(d.isEmpty());
+        String e = "";
+        System.out.println(e.isEmpty());
+    }
+
+
 }
+
+
+
+
+

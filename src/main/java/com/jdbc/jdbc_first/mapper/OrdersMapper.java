@@ -1,7 +1,7 @@
-package com.jdbc.mapper;
+package com.jdbc.jdbc_first.mapper;
 
-import com.jdbc.pojo.Orders;
-import com.jdbc.pojo.Worker;
+import com.jdbc.jdbc_first.pojo.Orders;
+import com.jdbc.jdbc_first.pojo.Worker;
 
 import java.sql.*;
 import java.util.ArrayList;

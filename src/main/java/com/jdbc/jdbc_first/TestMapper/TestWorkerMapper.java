@@ -1,7 +1,7 @@
-package com.jdbc.TestMapper;
+package com.jdbc.jdbc_first.TestMapper;
 
-import com.jdbc.mapper.WorkerMapper;
-import com.jdbc.pojo.Worker;
+import com.jdbc.jdbc_first.mapper.WorkerMapper;
+import com.jdbc.jdbc_first.pojo.Worker;
 import org.junit.Test;
 
 import java.sql.SQLException;
