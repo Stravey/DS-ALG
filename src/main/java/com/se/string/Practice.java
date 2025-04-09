@@ -83,7 +83,32 @@ public class Practice {
         System.out.println(e.isEmpty());
     }
 
+    @Test
+    public void test_05() {
+        String a = "abcdefg";
+        String b = "abc";
+        System.out.println(a.startsWith("abc"));
+        System.out.println(a.endsWith("c"));
+        System.out.println(b.endsWith("g"));
 
+        System.out.println(a.contains("abc"));
+        System.out.println(b.contains("abcd"));
+    }
+
+    @Test
+    public void test_06() {
+        String a = "陕西省-西安市-雁塔区";
+        // 雁塔区
+        System.out.println(a.substring(8));
+        // 西安市
+        System.out.println(a.substring(4,7));
+
+        String[] b =  a.split("-");
+        System.out.println(b.length);
+        for (int i = 0; i < b.length; i++) {
+            System.out.println(b[i]);
+        }
+    }
 }
 
 
