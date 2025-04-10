@@ -19,7 +19,7 @@ public class Demo {
         String str = " ";
         // 记录开始时间
         long start = System.currentTimeMillis();
-        for (int i = 0; i < 300000; i++) {
+        for (int i = 0; i < 200000; i++) {
             str += "test";
         }
         // 记录完成时间
@@ -34,7 +34,7 @@ public class Demo {
         StringBuffer sb = new StringBuffer();
         // 记录开始时间
         long start = System.currentTimeMillis();
-        for (int i = 0; i < 300000; i++) {
+        for (int i = 0; i < 200000; i++) {
             sb.append("test");
         }
         // 记录完成时间
@@ -49,7 +49,7 @@ public class Demo {
         StringBuilder sb = new StringBuilder();
         // 记录开始时间
         long start = System.currentTimeMillis();
-        for (int i = 0; i < 300000; i++) {
+        for (int i = 0; i < 200000; i++) {
             sb.append("test");
         }
         // 记录完成时间
