@@ -31,5 +31,15 @@ public class Demo {
         System.out.println(Math.pow(2,5));
 
         System.out.println(Math.sin(Math.PI/2));
+        System.out.println(Math.sin(-Math.PI/2));
+        System.out.println(Math.sin(Math.PI));
+
+        System.out.println(Math.cos(Math.PI));
+        System.out.println(Math.tan(Math.PI/2));
+        System.out.println(Math.tan(-Math.PI/2));
+
+        System.out.println(Math.tan(Math.PI));
+        System.out.println(Math.tan(-Math.PI));
+
     }
 }
