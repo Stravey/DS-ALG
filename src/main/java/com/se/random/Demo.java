@@ -21,4 +21,18 @@ public class Demo {
             System.out.println(random.nextInt(100));
         }
     }
+
+    @Test
+    public void test_03() {
+        Random random = new Random();
+        for(int i = 0; i < 5; i++) {
+            System.out.println(random.nextInt(100));
+        }
+        for (int i = 0; i < 5; i++) {
+            System.out.println(random.nextFloat(100));
+        }
+        for (int i = 0; i < 5; i++) {
+            System.out.println(random.nextDouble(100));
+        }
+    }
 }
