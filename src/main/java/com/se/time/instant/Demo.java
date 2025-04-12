@@ -23,5 +23,8 @@ public class Demo {
         System.out.println(is.getNano());
 
         System.out.println(Instant.from(instant));
+        System.out.println(Instant.from(instant1));
+        System.out.println(Instant.from(instant2)
+                .getEpochSecond());
     }
 }
