@@ -48,8 +48,8 @@ public class ParserGUI extends JFrame {
         controlPanel.setBorder(BorderFactory.createEmptyBorder(10, 0, 0, 0));
 
         // 功能按钮
-        JButton uploadBtn = createButton("上传文件", new Color(0, 150, 136));
-        JButton parseBtn = createButton("分析语法", new Color(255, 87, 34));
+        JButton uploadBtn = createButton("上传文件", Color.BLACK, new Color(120, 210, 147));
+        JButton parseBtn = createButton("分析语法", Color.BLACK, new Color(172, 120, 90));
 
         controlPanel.add(Box.createHorizontalGlue());
         controlPanel.add(uploadBtn);
@@ -76,11 +76,11 @@ public class ParserGUI extends JFrame {
         return area;
     }
 
-    private JButton createButton(String text, Color bgColor) {
+    private JButton createButton(String text, Color fgColor, Color bgColor) {
         JButton button = new JButton(text);
         button.setFont(new Font("微软雅黑", Font.BOLD, 14));
         button.setBackground(bgColor);
-        button.setForeground(Color.WHITE);
+        button.setForeground(fgColor);
         button.setFocusPainted(false);
         button.setBorder(BorderFactory.createCompoundBorder(
                 BorderFactory.createRaisedBevelBorder(),
