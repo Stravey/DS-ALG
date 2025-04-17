@@ -3,7 +3,9 @@ package com.se.localdate;
 import org.junit.Test;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 
 @SuppressWarnings("all")
 public class Demo {
@@ -47,6 +49,16 @@ public class Demo {
         System.out.println(now.minusDays(10));
 
         System.out.println(now.withYear(2026));
+    }
+
+    @Test
+    public void test_04() {
+        LocalDateTime now = LocalDateTime.now();
+        System.out.println("now: " + now);
+        System.out.println("date: " + now);
+        System.out.println(now.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
+        LocalDateTime of = LocalDateTime.of(2022,12,30,11,24,50,30);
+        System.out.println();
     }
 }
 
