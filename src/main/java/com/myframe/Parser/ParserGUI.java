@@ -110,7 +110,7 @@ public class ParserGUI extends JFrame {
         String input = inputArea.getText().trim();
         try {
             // 调用语法分析逻辑（需自行实现）
-            boolean isValid = new LL1Parser().parse(new Tokenizer().tokenize(input));
+            boolean isValid = new LL1Parser().parse(new Tokenizer().Tokenize(input));
             outputArea.setText(isValid ? "合法表达式" : "非法表达式");
             outputArea.setBackground(isValid ? new Color(220, 255, 220) : new Color(255, 220, 220));
         } catch (Exception ex) {

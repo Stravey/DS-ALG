@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Tokenizer {
-    public List<Token> tokenize(String input) {
+    public List<Token> Tokenize(String input) {
         List<Token> tokens = new ArrayList<>();
         int pos = 0;
         while (pos < input.length()) {
