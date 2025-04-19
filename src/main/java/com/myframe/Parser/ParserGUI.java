@@ -50,11 +50,14 @@ public class ParserGUI extends JFrame {
         // 功能按钮
         JButton uploadBtn = createButton("上传文件", Color.BLACK, new Color(120, 210, 147));
         JButton parseBtn = createButton("分析语法", Color.BLACK, new Color(172, 120, 90));
+        JButton clearBtn = createButton("清空", Color.BLACK, new Color(200, 200, 200));
 
         controlPanel.add(Box.createHorizontalGlue());
         controlPanel.add(uploadBtn);
         controlPanel.add(Box.createHorizontalStrut(30));
         controlPanel.add(parseBtn);
+        controlPanel.add(Box.createHorizontalStrut(30));
+        controlPanel.add(clearBtn);
         controlPanel.add(Box.createHorizontalGlue());
 
         // 组装主界面
@@ -65,6 +68,7 @@ public class ParserGUI extends JFrame {
         // 事件绑定
         uploadBtn.addActionListener(this::handleFileUpload);
         parseBtn.addActionListener(this::handleParse);
+        clearBtn.addActionListener(this::handleClear);
     }
 
     private JTextArea createStyledTextArea() {
@@ -117,6 +121,12 @@ public class ParserGUI extends JFrame {
             outputArea.setText("分析错误: " + ex.getMessage());
             outputArea.setBackground(new Color(255, 220, 220));
         }
+    }
+
+    private void handleClear(ActionEvent e) {
+        inputArea.setText("");
+        outputArea.setText("");
+        outputArea.setBackground(Color.WHITE);
     }
 
     public static void main(String[] args) {
