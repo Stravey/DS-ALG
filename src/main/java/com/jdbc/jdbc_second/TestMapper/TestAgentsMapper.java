@@ -19,6 +19,11 @@ public class TestAgentsMapper {
 
     @Test
     public void selectByCity() throws SQLException {
+        AgentsMapper mapper = new AgentsMapper();
+        List<Agents> rm = mapper.selectByCity("New York");
+        for(Agents o : rm) {
+            System.out.println(o.toString());
+        }
 
     }
 }
