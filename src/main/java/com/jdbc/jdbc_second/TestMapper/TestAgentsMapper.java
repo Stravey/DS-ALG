@@ -24,6 +24,10 @@ public class TestAgentsMapper {
         for(Agents o : rm) {
             System.out.println(o.toString());
         }
+    }
+
+    @Test
+    public void insert() throws SQLException {
 
     }
 }
