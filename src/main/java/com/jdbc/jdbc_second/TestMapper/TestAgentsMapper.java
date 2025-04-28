@@ -31,10 +31,37 @@ public class TestAgentsMapper {
     public void insert() throws SQLException {
         AgentsMapper mapper = new AgentsMapper();
         Agents o = new Agents();
-        o.setCity("New York");
-        o.setAname("123");
-        o.setPercent(1);
         o.setAid("134");
+        o.setAname("123");
+        o.setCity("New York");
+        o.setPercent(1);
         mapper.insert(o);
+    }
+
+    /**
+     * 测试更新数据
+     * @author rui
+     */
+    @Test
+    public void update() throws SQLException {
+        AgentsMapper mapper = new AgentsMapper();
+        Agents o = new Agents();
+        o.setPercent(1);
+        mapper.update(o);
+    }
+
+    /**
+     * 测试删除数据
+     * @author rui
+     */
+    @Test
+    public void delete() throws SQLException {
+        AgentsMapper mapper = new AgentsMapper();
+        Agents o = new Agents();
+        o.setAid("134");
+        o.setAname("123");
+        o.setCity("New York");
+        o.setPercent(1);
+        mapper.delete(o);
     }
 }
