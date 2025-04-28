@@ -26,8 +26,15 @@ public class TestAgentsMapper {
         }
     }
 
+    //测试数据插入数据库
     @Test
     public void insert() throws SQLException {
-
+        AgentsMapper mapper = new AgentsMapper();
+        Agents o = new Agents();
+        o.setCity("New York");
+        o.setAname("123");
+        o.setPercent(1);
+        o.setAid("134");
+        mapper.insert(o);
     }
 }

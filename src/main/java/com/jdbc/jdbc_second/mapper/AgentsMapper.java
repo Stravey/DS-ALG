@@ -50,4 +50,20 @@ public class AgentsMapper {
         }
         return list;
     }
+
+    // 插入数据
+    public void insert(Agents o) throws SQLException {
+        String sql = "INSERT INTO AGENTS (aid, aname, city, percent) VALUES (?,?,?,?)";
+        PreparedStatement ps = connection.prepareStatement(sql);
+        ps.setString(1, o.getAid());
+        ps.setString(2, o.getAname());
+        ps.setString(3, o.getCity());
+        ps.setInt(4, o.getPercent());
+        int a = ps.executeUpdate();
+        if(a > 0) {
+            System.out.println("数据插入成功");
+        } else {
+            System.out.println("数据插入失败");
+        }
+    }
 }
