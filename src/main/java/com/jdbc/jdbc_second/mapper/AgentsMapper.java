@@ -59,11 +59,42 @@ public class AgentsMapper {
         ps.setString(2, o.getAname());
         ps.setString(3, o.getCity());
         ps.setInt(4, o.getPercent());
-        int a = ps.executeUpdate();
-        if(a > 0) {
+        int num = ps.executeUpdate();
+        if(num > 0) {
             System.out.println("数据插入成功");
         } else {
             System.out.println("数据插入失败");
         }
     }
+
+    // 更新数据
+    public void update(Agents o) throws SQLException {
+        String sql = "UPDATE AGENTS SET city = ?, percent = ? WHERE aid = ?";
+        PreparedStatement ps = connection.prepareStatement(sql);
+        ps.setString(1, o.getCity());
+        ps.setInt(2, o.getPercent());
+        ps.setString(3, o.getAid());
+        int num = ps.executeUpdate();
+        if(num > 0) {
+            System.out.println("数据修改成功");
+        } else {
+            System.out.println("数据修改失败");
+        }
+    }
+
+
+    // 删除数据
+    public void delete(Agents o) throws SQLException {
+        String sql = "DELETE FROM AGENTS WHERE aid = ?";
+        PreparedStatement ps = connection.prepareStatement(sql);
+        ps.setString(1, o.getAid());
+        int num = ps.executeUpdate();
+        if(num > 0) {
+            System.out.println("删除数据成功");
+        } else {
+            System.out.println("删除数据失败");
+        }
+    }
+
+
 }
