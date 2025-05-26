@@ -3,7 +3,9 @@ package com.strive.Graph;
 import java.util.List;
 import java.util.Objects;
 
-//todo 顶点类
+/**
+ * 顶点类
+ */
 public class Vertex {
     String name; //todo 顶点的名字
     List<Edge> edges; //todo 边的List集合

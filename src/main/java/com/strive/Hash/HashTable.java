@@ -4,7 +4,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-//todo 拉链法 链表的思想
+/**
+ * 拉链法 链表的思想
+ **/
 public class HashTable {
     //todo 节点类
     static class Entry{
@@ -28,7 +30,8 @@ public class HashTable {
     /*
       求模运算替换为位运算
       -前提：数组长度是2的n次方
-      -hash % 数组长度 等价于 hash & （数组长度 - 1）*/
+      -hash % 数组长度 等价于 hash & （数组长度 - 1）
+    */
 
     //todo 根据 hash 码获取 value
     Object get(int hash,Object key){
